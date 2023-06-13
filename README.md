@@ -39,7 +39,7 @@ If you are using Chrome:
 
 Set where you want the files to be saved under `destination`. Now, for `website`, if we take the Softecks page for example, paste the link for page 1. Now mention which pages you want to download. Finally, set the number of concurrent downloads you want. I recommend keeping it at 5.
 
-###One More Thing:
+### One More Thing:
 
 If you are using this script to download many apps, you might notice your C drive filling up. That's because in each run of the code, a temporary folder is created and over many runs, it could accumulate to something significant. To clean up these files, go to the run command and enter `%temp%`. This will open where all temporary files are saved. Just delete all of them and then delete them from Recycle Bin.
 
