@@ -1,4 +1,4 @@
-# APKPure Batch Downloader
+## APKPure Batch Downloader
 
 Let's say you want to download the latest version of all apps made by a certain developer. Let's take Softecks for example. From [here](https://apkpure.com/developer/Softecks), you realize they have over 400 apps on APKPure. Now, if you want to download some/all of thsoe, then this script is for you. There are some other batch downloader for APKPure, each with their unique features. Note that I haven't tested these, and some of them haven't been updated in a while, so not sure if they still work.
 
@@ -21,7 +21,7 @@ pip install beautifulsoup4
 
 Restart VS code and the yellow squiggle should be gone. If it's still there, try View-> Command Palette -> Python: Select Interpreter and set it to the Python version.
 
-#### Note:
+### Note:
 
 You might have multiple versions of Python present on your computer. Many softwares require Python to run, so they migth have installed Python during the software's installation process. You can go to Control Panel -> Programs and Features to see if you have multiple versions of Python installed. In that case, it may be unclear under which version of Python selenium has been installed. So, run `pip show Selenium`, to check under which the Python version Selenium is installed. Now, in VS code, click on `View-> Command Palette -> Python: Select Interpreter` and set it to the Python version where Selenium is installed.
 
@@ -39,16 +39,16 @@ If you are using Chrome:
 
 Set where you want the files to be saved under `destination`. Now, for `website`, if we take the Softecks page for example, paste the link for page 1. Now mention which pages you want to download. Finally, set the number of concurrent downloads you want. I recommend keeping it at 5.
 
-##### One More Thing:
+###One More Thing:
 
 If you are using this script to download many apps, you might notice your C drive filling up. That's because in each run of the code, a temporary folder is created and over many runs, it could accumulate to something significant. To clean up these files, go to the run command and enter `%temp%`. This will open where all temporary files are saved. Just delete all of them and then delete them from Recycle Bin.
 
-### FAQ
+## FAQ
 
-##### Why does the code take so long?
+### Why does the code take so long?
 
 In an ideal world, the code would have been much faster. But for some corner cases, I had to implement extra checks in the code. For example, [here](https://apkpure.com/developer/NetEase%20Games) you will see the game Fortcraft's download link just redirects to the game Creative Destruction and there is no download link available for Fortcraft. Some apps like [Minecraft Chinese Edition](https://apkpure.com/minecraft-china-edition/com.netease.x19) doesn't even have a download button. One other subtle thing is app's name contain colon and other special characters that are not allowed in the file name of Windows. All these processing take a while and so the code feels slow.
 
-##### Final Note:
+### Final Note:
 
 Even though I did some testing, I am pretty sure there are apk files that the script cannot download for some corner case I missed. Moreover, subtle changes in the website might break the code. I will check once in couple of months to see if the code still works and update accordingly. Menawhile, if something doesn't work, please let me know.
